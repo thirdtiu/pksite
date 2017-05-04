@@ -5,11 +5,15 @@ jquery.mmenu.all.min.js
 */
 $(document).ready(function() {
   $("#mobile-menu").mmenu({
-     // options
-  }, {
      // configuration
+     searchfield: {
+     	add: true,
+     	search: false,
+     },
      offCanvas: {
-        pageSelector: '#page'
-     }
+        position: 'bottom',
+        zposition: 'front'
+     },
+     title: ''
   });
 });

@@ -10,15 +10,18 @@
 
 .navbar {
   position: relative;
-  min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+  min-height: 40px;
   margin-bottom: $navbar-margin-bottom;
   border: 1px solid transparent;
-
   // Prevent floats from breaking the navbar
   @include clearfix;
 
   @media (min-width: $grid-float-breakpoint) {
     border-radius: $navbar-border-radius;
+  }
+
+  @media (min-width: $screen-md-min) {
+    min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)  
   }
 }
 
@@ -33,6 +36,9 @@
 
   @media (min-width: $grid-float-breakpoint) {
     float: left;
+  }
+  @media (min-width: $screen-lg-min) {
+    margin-right: 100px !important;
   }
 }
 
@@ -109,7 +115,6 @@
   > .navbar-collapse {
     margin-right: -$navbar-padding-horizontal;
     margin-left:  -$navbar-padding-horizontal;
-
     @media (min-width: $grid-float-breakpoint) {
       margin-right: 0;
       margin-left:  0;
@@ -164,7 +169,13 @@
   float: left;
   font-size: $font-size-large;
   line-height: $line-height-computed;
-  margin-top: 12px;
+  margin-top: 7px;
+  margin-left: 20px;
+
+  @media (min-width: $screen-md-min) {
+    margin-top: 15px;
+    margin-left: 0;
+  }
 
   &:hover,
   &:focus {
@@ -173,7 +184,10 @@
 
   > img {
     display: block;
-    width: 270px;
+    width: 127px;
+    @media (min-width: $screen-md-min) {
+      width: 270px;
+    }
   }
 
   @media (min-width: $grid-float-breakpoint) {
@@ -571,9 +585,13 @@ box-shadow: 1px 1px 1px 0px rgba(255,255,255,.4);
   }
 
   .search {
+    display: none;
     height: $navbar-height;
     line-height: $navbar-height;
-    margin-left: 30px;
+    
+    @media (min-width: $screen-md-min) {
+      display: block;
+    }
 
     a{
       color: #919191;
