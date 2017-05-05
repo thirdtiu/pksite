@@ -112,6 +112,8 @@ output {
 // input[type="color"]
 
 .form-control {
+  border-radius: 0;
+  font-weight: 300;
   display: block;
   width: 100%;
   height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
@@ -121,8 +123,7 @@ output {
   color: $input-color;
   background-color: $input-bg;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  border: 1px solid $input-border;
-  border-radius: $input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+  border: 1px solid transparent;
   @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
   @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
 
@@ -354,7 +355,7 @@ input[type="checkbox"] {
   }
 }
 
-@include input-size('.input-lg', $input-height-large, $padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $input-border-radius-large);
+@include input-size('.input-lg', $input-height-large, $padding-large-vertical, $padding-large-horizontal, 18px, $line-height-large, 0);
 .form-group-lg {
   .form-control {
     height: $input-height-large;
