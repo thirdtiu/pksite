@@ -61,6 +61,44 @@
 		background-position: -204px 0;
 	}
 }
+.social-icons-lg {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+	> li {
+		display: inline-block;
+		margin-right: 13px;
+	}
+
+	a {
+		display: block;
+		text-indent: -99999px;
+		outline: none;
+		width: 118px;
+		height: 162px;
+		background: url(../images/social-media-lg.png) no-repeat;
+	}
+
+	.twitter a {
+		background-position: 0 0;
+	}
+	.facebook a {
+		background-position: -131px 0;
+	}
+	.youtube a {
+		background-position: -257px 0;
+	}
+	.linkedin a {
+		background-position: -384px 0;
+	}
+	.instagram a {
+		background-position: -510px 0;
+	}
+	.snapchat a {
+		background-position: -640px 0;
+	}
+}
 /*** end social icons */
 /** forms **/
 /** end forms **/
@@ -497,12 +535,103 @@
 		  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
 		  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
 		  align-items: center;
+		  font-size: 24px;
+		  color: #8c5479;
+		  .social-icons {
+		  	margin-left: 10px;
+		  }
+	}
+	.btn {
+		@media (max-width: 448px) {
+			margin-bottom: 20px;
+		}
 	}
 	.f-container {
 		flex-flow: row;
+		@media (max-width: 448px) {
+			flex-flow: column;
+		}
 	}
 }
 /** END ABOUT SECTION **/
+
+/** AS SEEN SECTION **/
+.advertisement {
+	padding: 20px 0;
+	h1 {
+		font-size: 24px;
+		font-weight: 300;
+		margin: 0 0 36px;
+		@media (min-width: $screen-md-min){
+			font-size: 36px;
+		}
+	}
+	.f-container{
+		align-items: center;
+		justify-content: center;
+	}
+	img{
+		margin: 0 25px 40px;
+		@media (min-width: $screen-md-min){
+			margin: 0 25px;
+		}
+	}
+}
+/** END AS SEEN SECTION **/
+
+/** STAY IN TOUCH SECTION **/
+.stay-in-touch {
+	background: url(../images/clouds-top.png) top repeat-x #333;
+	color: #fff;
+	padding-top: 150px;
+	padding-bottom: 50px;
+	.f-container {
+		justify-content: space-between;
+		align-items: center;
+	}
+	h1{
+		font-weight: 300;
+		font-size: 36px;
+		line-height: 1.2;
+		margin: 0 0 20px 0;
+		@media (min-width: $screen-md-min){
+			font-size: 48px;	
+		}
+	}
+	.hd {
+		margin-bottom: 20px;
+		.btn{
+			border-radius: 16px;
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d56784+0,da928b+50,dac99f+100 */
+			background: #d56784; /* Old browsers */
+			background: -moz-linear-gradient(left,  #d56784 0%, #da928b 50%, #dac99f 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(left,  #d56784 0%,#da928b 50%,#dac99f 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to right,  #d56784 0%,#da928b 50%,#dac99f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d56784', endColorstr='#dac99f',GradientType=1 ); /* IE6-9 */
+			color: #000;
+			border: none;
+		}
+	}
+	.social-icons-lg {
+		display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	  display: -ms-flexbox;  /* TWEENER - IE 10 */
+	  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+	  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+	  align-items: center;
+	  justify-content: center;
+	  flex-wrap: wrap;
+	  flex-direction: row;
+
+	  > li {
+	  	margin-bottom: 20px;
+	  	flex-basis: 25%;
+	  	@media (min-width: $screen-lg-min){
+				flex-basis: 0;
+	  	}
+	  }
+	}
+}
+/** END STAY IN TOUCH SECTION **/
 
 /** FOOTER **/
 .main-footer {
