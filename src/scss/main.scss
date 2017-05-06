@@ -475,6 +475,13 @@
 		position: absolute;
 		bottom: 0;
 		right: 0;
+		display: none;
+		@media (min-width: $screen-lg-min){
+			display: block;
+		}
+	}
+	.content {
+		padding-bottom: 150px;
 	}
 	h1 {
 		font-weight: 300;
@@ -483,6 +490,16 @@
 	}
 	p {
 		margin-bottom: 20px;
+	}
+	.share {
+			display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+		  display: -ms-flexbox;  /* TWEENER - IE 10 */
+		  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+		  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+		  align-items: center;
+	}
+	.f-container {
+		flex-flow: row;
 	}
 }
 /** END ABOUT SECTION **/
