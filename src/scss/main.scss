@@ -951,11 +951,11 @@
 }
 .meetup-box {
 	min-height: 366px;
-	background: url(../images/clouds-bot-black.png) top center repeat-x;
-	padding-top: 100px;
+	background: url(../images/clouds-bot-black.png) top left repeat-x;
+	padding-top: 150px;
 	color: #fff;
 	@media (min-width: $screen-md-min){
-		padding-top: 120px;
+		padding-top: 170px;
 	}
 	.hd {
 		font-weight: bold;
@@ -1092,7 +1092,7 @@
 		position: relative;
 
 		.pen-drawing {
-			background: url(../images/pen-drawing.png);
+			background: url(../images/pen-drawing.png) no-repeat;
 			background-blend-mode: darken;
 			background-size: contain;
 			width: 295px;
