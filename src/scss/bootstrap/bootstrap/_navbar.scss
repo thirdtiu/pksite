@@ -412,8 +412,8 @@
   background-color: $navbar-default-bg;
   border-color: rgba(0, 0, 0, .2);
   -webkit-box-shadow: 1px 1px 1px 0px rgba(255,255,255,.4);
--moz-box-shadow: 1px 1px 1px 0px rgba(255,255,255,.4);
-box-shadow: 1px 1px 1px 0px rgba(255,255,255,.4);
+  -moz-box-shadow: 1px 1px 1px 0px rgba(255,255,255,.4);
+  box-shadow: 1px 1px 1px 0px rgba(255,255,255,.4);
 
   .navbar-brand {
     color: $navbar-default-brand-color;
