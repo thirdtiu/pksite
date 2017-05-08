@@ -1075,6 +1075,67 @@
 		}
 	}
 }
+
+.big-player-section{
+	padding: 14px 0;
+	background: url(../images/head-bg-home.jpg) center;
+	background-size: cover;
+
+	.border {
+		min-height: 800px;
+		border-top: 3px solid #9d96ad;
+		-moz-border-image: -moz-linear-gradient(left,  #9d96ad 0%, #93a0b3 14%, #a1ddc3 32%, #c0dfb5 48%, #d8ae95 64%, #cd6186 81%, #b25f89 100%); /* FF3.6-15 */
+		-webkit-border-image: -webkit-linear-gradient(left,  #9d96ad 0%,#93a0b3 14%,#a1ddc3 32%,#c0dfb5 48%,#d8ae95 64%,#cd6186 81%,#b25f89 100%); /* Chrome10-25,Safari5.1-6 */
+		border-image: linear-gradient(to right,  #9d96ad 0%,#93a0b3 14%,#a1ddc3 32%,#c0dfb5 48%,#d8ae95 64%,#cd6186 81%,#b25f89 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		border-image-slice: 1;
+		padding: 15px 0;
+		position: relative;
+
+		.pen-drawing {
+			background: url(../images/pen-drawing.png);
+			background-blend-mode: darken;
+			background-size: contain;
+			width: 295px;
+			height: 338px;
+			@media (min-width: $screen-md-min){
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 661px;
+				height: 750px;
+			}
+		}
+		.content {
+			font-size: 14px;
+			padding: 30px 0;
+			@media (min-width: $screen-md-min){
+				font-size: 18px;
+				padding: 72px 0;
+			}
+			h2{
+				font-weight: 300;
+				color: #2c0130;
+				font-size: 24px;
+				margin-bottom: 30px;
+				@media (min-width: $screen-md-min){
+					font-size: 36px;
+				}
+			}
+			em{
+				font-weight: bold;
+			}
+			strong{
+				color: #ec0505;
+			}
+			p {
+				margin-bottom: 30px;
+				@media (min-width: $screen-md-min){
+					margin-bottom: 40px;	
+				}
+			}
+		}
+	}
+}
 /** END EVENTS PAGE **/
 
 /** FOOTER **/
