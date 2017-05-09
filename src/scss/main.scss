@@ -156,6 +156,10 @@
   min-height: 777px;
   background: url(../images/head-bg-home.jpg) center;
   background-size: cover;
+  &.head-wrap-bio{
+  	background: url(../images/bio-bg.jpg) center;
+  	background-size: cover;
+  }
 }
 
 
@@ -793,6 +797,67 @@
 			font-size: 48px;
 		}
 	}
+	.meetup-box{
+		min-height: 366px;
+		background: url(../images/clouds-bot-black.png) top left repeat-x;
+		padding: 150px 0 0 0;	
+		@media (min-width: $screen-md-min){
+			padding: 170px 0 0 0;
+		}
+		.hd{
+			display: block;
+		}
+	}
+}
+.meetup-box {
+	color: #fff;
+	background: rgba(0, 0, 0, .6);
+	padding: 20px 0;
+	.border{
+		border-top: 3px solid #9d96ad;
+		border-bottom: 3px solid #9d96ad;
+		-moz-border-image: -moz-linear-gradient(left,  #9d96ad 0%, #93a0b3 14%, #a1ddc3 32%, #c0dfb5 48%, #d8ae95 64%, #cd6186 81%, #b25f89 100%); /* FF3.6-15 */
+		-webkit-border-image: -webkit-linear-gradient(left,  #9d96ad 0%,#93a0b3 14%,#a1ddc3 32%,#c0dfb5 48%,#d8ae95 64%,#cd6186 81%,#b25f89 100%); /* Chrome10-25,Safari5.1-6 */
+		border-image: linear-gradient(to right,  #9d96ad 0%,#93a0b3 14%,#a1ddc3 32%,#c0dfb5 48%,#d8ae95 64%,#cd6186 81%,#b25f89 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		border-image-slice: 1;
+		padding: 30px 0 10px 0;
+		@media (min-width: $screen-md-min){
+			padding: 70px 0 40px 0;		
+		}
+	}
+	.hd {
+		font-weight: bold;
+		font-style: italic;
+		margin-bottom: 20px;
+		font-size: 18px;
+		display: block;
+		@media (min-width: $screen-md-min){
+			font-size: 36px;
+			display: none;
+		}
+	}
+	.form-group {
+		@media (max-width: $screen-md-min){
+			margin-bottom: 2px;
+		}
+	}
+	.submit-button {
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	.btn {
+		background: #ff7e00;
+		color: #fff;
+		border-radius: 100px;
+		font-weight: bold;
+		font-size: 18px;
+		padding-left: 40px;
+		padding-right: 40px;
+		@media (min-width: $screen-md-min){
+			font-size: 30px;
+			padding: 18px 100px;	
+		}
+	}
 }
 .large-head,
 .countdown-section {
@@ -949,46 +1014,7 @@
 	  }
 	}
 }
-.meetup-box {
-	min-height: 366px;
-	background: url(../images/clouds-bot-black.png) top left repeat-x;
-	padding-top: 150px;
-	color: #fff;
-	@media (min-width: $screen-md-min){
-		padding-top: 170px;
-	}
-	.hd {
-		font-weight: bold;
-		font-style: italic;
-		margin-bottom: 20px;
-		font-size: 18px;
-		@media (min-width: $screen-md-min){
-			font-size: 36px;
-		}
-	}
-	.form-group {
-		@media (max-width: $screen-md-min){
-			margin-bottom: 2px;
-		}
-	}
-	.submit-button {
-		margin-top: 30px;
-		margin-bottom: 30px;
-	}
-	.btn {
-		background: #ff7e00;
-		color: #fff;
-		border-radius: 100px;
-		font-weight: bold;
-		font-size: 18px;
-		padding-left: 40px;
-		padding-right: 40px;
-		@media (min-width: $screen-md-min){
-			font-size: 30px;
-			padding: 18px 100px;	
-		}
-	}
-}
+
 
 /** features **/
 .features-section {
@@ -1232,10 +1258,48 @@
 		}
 	}
 }
+.bottom-section{
+	background: url(../images/buildings-white.jpg) center;
+	background-size: cover;
+}
+
+.signature {
+	background: #fff;
+	padding: 25px 0;
+	img{
+		max-width: 100%;
+	}
+	h1{
+		margin: 20px 0;
+	}
+	h2{
+		margin: 0 0 10px 0;
+		font-size: 24px;
+		font-weight: bold;
+	}
+}
 /** END EVENTS PAGE **/
 
 /** BIO PAGE **/
-
+.bio-banner{
+	.video{
+		position: relative;
+		img{
+			border: 5px solid #2a2a2a;
+			position: relative;
+		}
+		&:before{
+			content: ' ';
+			position: absolute;
+			height: 24px;
+			width: 650px;
+			background: url(../images/bio-vid-shadow.png) no-repeat;
+			bottom: -24px;
+			left: 50%;
+			transform: translate(-50%, 0);
+		}
+	}
+}
 /** END BIO PAGE **/
 
 /** FOOTER **/
