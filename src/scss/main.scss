@@ -2,6 +2,9 @@
 @import "mmenu.all";
 
 /**UTILITIES**/
+img{
+	max-width: 100%;
+}
 /** flex containers **/
 .f-container {
 	display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -1281,9 +1284,42 @@
 /** END EVENTS PAGE **/
 
 /** BIO PAGE **/
+.head-wrap-bio{
+	position: relative;
+	@media(max-width: $screen-md-min){
+		min-height: 560px;
+	}
+}
 .bio-banner{
+	h1 {
+		display: block;
+		font-size: 48px;
+		font-weight: 800;
+		color: #000;
+		text-transform: uppercase;
+		@media(min-width: $screen-md-min){
+			display: none;
+		}
+	}
+	.mobile-image {
+		position: absolute;
+		bottom: 40px;
+		width: 100%;
+		text-align: center;
+		display: block;
+		@media(min-width: $screen-md-min){
+			display: none;
+		}
+		img{
+			display: inline-block;
+		}
+	}
 	.video{
 		position: relative;
+		display: none;
+		@media(min-width: $screen-md-min){
+			display: block;
+		}
 		img{
 			border: 5px solid #2a2a2a;
 			position: relative;
@@ -1292,11 +1328,154 @@
 			content: ' ';
 			position: absolute;
 			height: 24px;
-			width: 650px;
+			width: 100%;
 			background: url(../images/bio-vid-shadow.png) no-repeat;
 			bottom: -24px;
-			left: 50%;
-			transform: translate(-50%, 0);
+			@media(min-width: $screen-md-min){
+				width: 650px;	
+				left: 50%;
+				transform: translate(-50%, 0);
+			}
+		}
+	}
+}
+.empire-section{
+	position: relative;
+	background:url(../images/buildings-white.jpg) center no-repeat;
+	background-size: cover;
+	&:after{
+		height: 166px;
+		content: ' ';
+		width: 100%;
+		background: url(../images/clouds-bot.png) top repeat-x;
+		position: absolute;
+		top: -166px;
+		z-index: 0;
+	}
+	.hd {
+		font-size: 30px;
+		text-align: center;
+		font-weight: 800;
+		margin: 0;
+		position: relative;
+		top: -30px;
+		color: #2c0130;
+		z-index: 9;
+		@media (min-width: $screen-md-min){
+			font-size: 60px;
+		}
+	}
+	.f-container{
+		overflow: hidden;
+		img {
+			display: none;
+			@media (min-width: $screen-md-min){
+				margin-bottom: -50px;
+				display: block;
+			}
+		}
+		.content {
+			font-size: 14px;
+			padding: 0 0 40px 0;
+			@media (min-width: $screen-md-min){
+				font-size: 18px;
+				padding: 20px 0 40px 70px;
+			}
+			h2{
+				font-weight: 300;
+				color: #2c0130;
+				font-size: 24px;
+				margin-bottom: 30px;
+				@media (min-width: $screen-md-min){
+					font-size: 36px;
+				}
+			}
+			em{
+				font-weight: bold;
+			}
+			strong{
+				color: #ec0505;
+			}
+			p {
+				margin-bottom: 30px;
+				@media (min-width: $screen-md-min){
+					margin-bottom: 40px;	
+				}
+			}
+		}
+	}
+}
+.ordinary-world{
+	min-height: 1080px;
+	background: url(../images/ordinary-world.jpg) center;
+	background-size: cover;
+	border-bottom: 3px solid #9d96ad;
+	-moz-border-image: -moz-linear-gradient(left,  #9d96ad 0%, #93a0b3 14%, #a1ddc3 32%, #c0dfb5 48%, #d8ae95 64%, #cd6186 81%, #b25f89 100%); /* FF3.6-15 */
+	-webkit-border-image: -webkit-linear-gradient(left,  #9d96ad 0%,#93a0b3 14%,#a1ddc3 32%,#c0dfb5 48%,#d8ae95 64%,#cd6186 81%,#b25f89 100%); /* Chrome10-25,Safari5.1-6 */
+	border-image: linear-gradient(to right,  #9d96ad 0%,#93a0b3 14%,#a1ddc3 32%,#c0dfb5 48%,#d8ae95 64%,#cd6186 81%,#b25f89 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	border-image-slice: 1;
+	
+	.hd {
+		font-size: 24px;
+		font-weight: 300;
+		text-transform: uppercase;
+		margin: 50px 0;
+		@media (min-width: $screen-md-min) {
+			margin: 70px 0;
+			font-size: 48px;
+		}
+	}
+	.f-container{
+		align-items: flex-start;
+		justify-content: center;
+		margin-bottom: 40px;
+	}
+
+	.item {
+		flex-basis: 100%;
+		text-align: center;
+		@media (min-width: $screen-md-min) {
+			flex-basis: 50%;
+			text-align: left;
+		}
+		img{
+			border: 10px solid #fff;
+		}
+		&:first-child img{
+			@media (min-width: $screen-md-min) {
+				transform:          rotate(-5deg);
+				-ms-transform:      rotate(-5deg);
+				-moz-transform:     rotate(-5deg);
+				-webkit-transform:  rotate(-5deg);
+				-o-transform:       rotate(-5deg);
+			}
+		}
+		&:last-child{
+			padding-top: 40px;
+		}
+		&:last-child img{
+			@media (min-width: $screen-md-min) {
+				transform:          rotate(10deg);
+				-ms-transform:      rotate(10deg);
+				-moz-transform:     rotate(10deg);
+				-webkit-transform:  rotate(10deg);
+				-o-transform:       rotate(10deg);
+			}
+		}
+		.content{
+			padding: 20px 0 0;
+			text-align: left;
+			font-size: 12px;
+			@media (min-width: $screen-md-min) {
+				padding: 60px 40px 40px 40px;
+				font-size: 18px;
+			}
+		}
+		&:first-child .content {
+			// padding-left: 40px;
+		}
+		&:last-child .content {
+			padding-left: 0;
 		}
 	}
 }
