@@ -1481,6 +1481,8 @@ img{
 }
 .adventure-section{
 	background-color: #232323;
+	border-bottom:8px solid #000;
+	position: relative;
 	@media (min-width: $screen-md-min){
 		min-height: 954px;
 		background: url(../images/adventure-bg.jpg) center transparent;
@@ -1530,6 +1532,93 @@ img{
 			padding: 100px 0;
 		}
 	}
+}
+.refusal-section,
+.threshold{
+	border-bottom: 3px solid #9d96ad;
+	-moz-border-image: -moz-linear-gradient(left,  #9d96ad 0%, #93a0b3 14%, #a1ddc3 32%, #c0dfb5 48%, #d8ae95 64%, #cd6186 81%, #b25f89 100%); /* FF3.6-15 */
+	-webkit-border-image: -webkit-linear-gradient(left,  #9d96ad 0%,#93a0b3 14%,#a1ddc3 32%,#c0dfb5 48%,#d8ae95 64%,#cd6186 81%,#b25f89 100%); /* Chrome10-25,Safari5.1-6 */
+	border-image: linear-gradient(to right,  #9d96ad 0%,#93a0b3 14%,#a1ddc3 32%,#c0dfb5 48%,#d8ae95 64%,#cd6186 81%,#b25f89 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	border-image-slice: 1;
+	.content{
+		padding: 40px 0;
+		@media(min-width: $screen-md-min){
+			padding: 70px 0;
+		}
+	}
+	h1{
+		font-size: 24px;
+		font-weight: 300;
+		margin: 0 0 24px 0;
+		@media(min-width: $screen-md-min){
+			font-size: 48px;	
+			margin: 0 0 60px 0;
+		}
+	}
+	p{
+		margin-bottom: 20px;
+		font-size: 12px;
+		@media(min-width: $screen-md-min){
+			font-size: 18px;
+			margin-bottom: 40px;
+		}
+	}
+}
+.threshold{
+	border-bottom: none;
+}
+
+.gray-block{
+	background: url(../images/clouds-top.png) top repeat-x #e9e9e9;
+	padding: 160px 0 45px;
+	border-bottom: 3px solid #9d96ad;
+	-moz-border-image: -moz-linear-gradient(left,  #9d96ad 0%, #93a0b3 14%, #a1ddc3 32%, #c0dfb5 48%, #d8ae95 64%, #cd6186 81%, #b25f89 100%); /* FF3.6-15 */
+	-webkit-border-image: -webkit-linear-gradient(left,  #9d96ad 0%,#93a0b3 14%,#a1ddc3 32%,#c0dfb5 48%,#d8ae95 64%,#cd6186 81%,#b25f89 100%); /* Chrome10-25,Safari5.1-6 */
+	border-image: linear-gradient(to right,  #9d96ad 0%,#93a0b3 14%,#a1ddc3 32%,#c0dfb5 48%,#d8ae95 64%,#cd6186 81%,#b25f89 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	border-image-slice: 1;
+	h1{
+		font-size: 24px;
+		font-weight: 300;
+		margin: 0 0 24px 0;
+		@media(min-width: $screen-md-min){
+			font-size: 48px;	
+			margin: 0 0 60px 0;
+		}
+	}
+	p{
+		margin-bottom: 20px;
+		font-size: 12px;
+		@media(min-width: $screen-md-min){
+			font-size: 18px;
+			margin-bottom: 40px;
+		}
+	}
+}
+
+.ordeal {
+	background: #e9e9e9;
+	padding: 30px 0;
+	@media(min-width: $screen-md-min){
+		padding: 70px 0;
+	}
+	h1{
+		font-size: 24px;
+		font-weight: 300;
+		margin: 0 0 24px 0;
+		text-transform: uppercase;
+		@media(min-width: $screen-md-min){
+			font-size: 48px;	
+			margin: 0 0 60px 0;
+		}
+	}
+	p{
+		margin-bottom: 20px;
+		font-size: 12px;
+		@media(min-width: $screen-md-min){
+			font-size: 18px;
+			margin-bottom: 40px;
+		}
+	}	
 }
 /** END BIO PAGE **/
 
