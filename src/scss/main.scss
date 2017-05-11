@@ -814,6 +814,9 @@ ul.two-columns{
 		content: ' ';
 		bottom: -32px;
 	}
+	&.no-tip:after {
+		display: none;
+	}
 	.blackstrip {
 		background: rgba(0, 0, 0, .6);
 		color: #fff;
@@ -1316,6 +1319,122 @@ ul.two-columns{
 	}
 }
 /** END EVENTS PAGE **/
+
+/** EVENTS THANK YOU PAGE **/
+.event-navbar-details{
+	margin-top: 24px;
+}
+.event-thankyou-banner{
+	.hd{
+		font-size: 60px;
+		font-weight: 800;
+		padding: 30px 0;
+		margin: 0;
+		border-bottom: 1px solid rgba(0, 0, 0, .2);
+		-webkit-box-shadow: 1px 1px 1px 0px rgba(255,255,255,.4);
+	  -moz-box-shadow: 1px 1px 1px 0px rgba(255,255,255,.4);
+	  box-shadow: 1px 1px 1px 0px rgba(255,255,255,.4);
+	}
+	.sub-hd{
+		padding: 20px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid rgba(0, 0, 0, .2);
+		-webkit-box-shadow: 1px 1px 1px 0px rgba(255,255,255,.4);
+	  -moz-box-shadow: 1px 1px 1px 0px rgba(255,255,255,.4);
+	  box-shadow: 1px 1px 1px 0px rgba(255,255,255,.4);	
+	  .highlight{
+	  	background: #fff;
+	  	display: inline-block;
+	  	padding: 7px 20px;
+	  	border-radius: 2px;
+	  	margin-left: 10px;
+	  }
+	}
+	.custom-alert{
+		font-size: 36px;
+		color: #fff;
+		background: #5b3263;
+		max-width: 832px;
+		margin: 0 auto;
+		text-align: left;
+		padding: 30px 50px;
+		-webkit-border-radius: 60px;
+		-webkit-border-top-right-radius: 30px;
+		-webkit-border-bottom-left-radius: 30px;
+		-moz-border-radius: 60px;
+		-moz-border-radius-topright: 30px;
+		-moz-border-radius-bottomleft: 30px;
+		border-radius: 60px;
+		border-top-right-radius: 30px;
+		border-bottom-left-radius: 30px;
+		position: relative;
+		margin-bottom: 36px;
+		&:after{
+			background: url(../images/bio-vid-shadow.png) center no-repeat;
+			width: 100%;
+			position: absolute;
+			bottom:-24px;
+			height: 24px;
+			content: '';
+		}
+		.f-container{
+			// max-width: 832px;
+			// display: -webkit-inline-flex;
+			// display: -moz-inline-box;
+			// display: -ms-inline-flexbox;
+			// display: -webkit-inline-flex;
+			// display: inline-flex;
+		}
+		.icon{
+			margin-right: 25px;
+		}
+		p{
+			margin: 0;
+		}
+	}
+	.event-particulars{
+		min-height: 509px;
+		padding-top:210px;
+		padding-bottom: 50px;
+		background: url(../images/clouds-bot-black.png) left top repeat-x;
+		color: #fff;
+		h2{
+			font-size: 30px;
+			font-weight: bold;
+		}
+		ul{
+			list-style-type: none;
+			margin: 0;
+			padding:0;
+			li{
+				position: relative;
+				padding-left: 30px;
+				margin-bottom: 20px;
+				.glyphicon{
+					position: absolute;
+					left: 0;
+					top:5px;
+				}
+				.glyphicon-map-marker{
+					top:10px;
+				}
+			}
+		}
+		.share{
+			img{
+				display: inline-block;
+				margin: 0 10px;
+			}
+		}
+	}
+	.map-embed {
+    // position: relative;
+    width: 100%;
+  }
+  .map-embed iframe {
+  	border: 9px solid rgba(55, 41, 72, .6) !important;
+  }
+}
 
 /** BIO PAGE **/
 .head-wrap-bio{
