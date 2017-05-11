@@ -179,6 +179,13 @@ ul.two-columns{
   }
 }
 
+.affix-wrap{
+	width: 100%;
+	z-index: 999999;
+	&.affix .navbar{
+		background: rgba(255, 255, 255, .8);
+	}
+}
 
 .navbar-toggle {
 	display: none;
@@ -800,6 +807,9 @@ ul.two-columns{
 /** END EVENTS BLOCK **/
 
 /** EVENTS PAGE **/
+.affix + .event-banner{
+	margin-top: 0;
+}
 .event-banner {
 	margin-top: -28px;
 	position: relative;
@@ -1326,7 +1336,7 @@ ul.two-columns{
 }
 .event-thankyou-banner{
 	.hd{
-		font-size: 60px;
+		font-size: 30px;
 		font-weight: 800;
 		padding: 30px 0;
 		margin: 0;
@@ -1334,6 +1344,15 @@ ul.two-columns{
 		-webkit-box-shadow: 1px 1px 1px 0px rgba(255,255,255,.4);
 	  -moz-box-shadow: 1px 1px 1px 0px rgba(255,255,255,.4);
 	  box-shadow: 1px 1px 1px 0px rgba(255,255,255,.4);
+	  @media(min-width: $screen-md-min){
+	  	font-size: 60px;	
+	  }
+	}
+	.banner-content{
+		font-size: 14px;
+		@media (min-width: $screen-md-min){
+			font-size: 18px;
+		}
 	}
 	.sub-hd{
 		padding: 20px;
@@ -1342,6 +1361,10 @@ ul.two-columns{
 		-webkit-box-shadow: 1px 1px 1px 0px rgba(255,255,255,.4);
 	  -moz-box-shadow: 1px 1px 1px 0px rgba(255,255,255,.4);
 	  box-shadow: 1px 1px 1px 0px rgba(255,255,255,.4);	
+	  font-size: 14px;
+	  @media(min-width: $screen-md-min){
+	  	font-size: 18px;
+	  }
 	  .highlight{
 	  	background: #fff;
 	  	display: inline-block;
@@ -1351,7 +1374,7 @@ ul.two-columns{
 	  }
 	}
 	.custom-alert{
-		font-size: 36px;
+		font-size: 24px;
 		color: #fff;
 		background: #5b3263;
 		max-width: 832px;
@@ -1369,6 +1392,9 @@ ul.two-columns{
 		border-bottom-left-radius: 30px;
 		position: relative;
 		margin-bottom: 36px;
+		@media (min-width: $screen-md-min){
+			font-size: 36px;
+		}
 		&:after{
 			background: url(../images/bio-vid-shadow.png) center no-repeat;
 			width: 100%;
@@ -1376,6 +1402,9 @@ ul.two-columns{
 			bottom:-24px;
 			height: 24px;
 			content: '';
+			@media (max-width: $screen-sm-min){
+				display: none;
+			}
 		}
 		.f-container{
 			// max-width: 832px;
@@ -1394,18 +1423,28 @@ ul.two-columns{
 	}
 	.event-particulars{
 		min-height: 509px;
-		padding-top:210px;
-		padding-bottom: 50px;
+		padding-top: 130px;
 		background: url(../images/clouds-bot-black.png) left top repeat-x;
 		color: #fff;
+		text-align: center;
+		@media (min-width: $screen-md-min){
+			padding-top:210px;
+			padding-bottom: 50px;
+			text-align: left;
+		}
 		h2{
 			font-size: 30px;
 			font-weight: bold;
 		}
 		ul{
+			text-align: left;
 			list-style-type: none;
 			margin: 0;
 			padding:0;
+			font-size: 14px;
+			@media (min-width: $screen-md-min){
+				font-size: 18px;
+			}
 			li{
 				position: relative;
 				padding-left: 30px;
