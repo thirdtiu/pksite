@@ -119,6 +119,10 @@ img{
 }
 /** custom buttons **/
 .btn {
+	&.btn-orange {
+		background: #ff7e00;
+		color: #fff;
+	}
 	&.outline-btn {
 		border: 4px solid #000;
 		color: #000;
@@ -1768,7 +1772,35 @@ img{
 	.btn{
 		@media (max-width: $screen-md-min){
 			margin-bottom: 15px;
+			font-size: 16px;
 		}
+	}
+}
+
+.sign-up-section{
+	padding: 30px 0 20px;
+	font-size: 18px;
+	border-bottom: 3px solid #9d96ad;
+	-moz-border-image: -moz-linear-gradient(left,  #9d96ad 0%, #93a0b3 14%, #a1ddc3 32%, #c0dfb5 48%, #d8ae95 64%, #cd6186 81%, #b25f89 100%); /* FF3.6-15 */
+	-webkit-border-image: -webkit-linear-gradient(left,  #9d96ad 0%,#93a0b3 14%,#a1ddc3 32%,#c0dfb5 48%,#d8ae95 64%,#cd6186 81%,#b25f89 100%); /* Chrome10-25,Safari5.1-6 */
+	border-image: linear-gradient(to right,  #9d96ad 0%,#93a0b3 14%,#a1ddc3 32%,#c0dfb5 48%,#d8ae95 64%,#cd6186 81%,#b25f89 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	border-image-slice: 1;
+
+	@media (min-width: $screen-md-min){
+		font-size: 36px;
+		padding: 50px 0 40px;
+	}
+	.btn{
+		padding: 20px 50px;
+		text-transform: uppercase;
+		font-size: 18px;
+		@media (min-width: $screen-md-min){
+			font-size: 36px;	
+		}
+	}
+	p{
+		font-weight: 300;
+		margin-bottom: 40px;
 	}
 }
 /** END BIO PAGE **/
