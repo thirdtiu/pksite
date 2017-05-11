@@ -1803,6 +1803,27 @@ img{
 		margin-bottom: 40px;
 	}
 }
+.thank-you{
+	background: url(../images/features-bg.jpg) top center;
+	background-size: cover;
+	font-size: 18px;
+	font-weight: 300;
+	padding: 35px 0;
+	@media (min-width: $screen-md-min){
+		padding: 85px 0;
+		font-size: 36px;
+	}
+	p{
+		margin-bottom: 30px;
+	}
+	img{
+		width: 202px;
+		@media (min-width: $screen-md-min){
+			width: 272px;
+		}
+	}
+
+}
 /** END BIO PAGE **/
 
 /** FOOTER **/
