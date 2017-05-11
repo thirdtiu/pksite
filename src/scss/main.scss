@@ -5,6 +5,16 @@
 img{
 	max-width: 100%;
 }
+ul.two-columns{
+	@media(min-width: $screen-md-min){
+		-moz-column-count: 2;
+	  -moz-column-gap: 20px;
+	  -webkit-column-count: 2;
+	  -webkit-column-gap: 20px;
+	  column-count: 2;
+	  column-gap: 20px;
+	}
+}
 /** flex containers **/
 .f-container {
 	display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -1809,6 +1819,11 @@ img{
 	font-size: 18px;
 	font-weight: 300;
 	padding: 35px 0;
+	border-bottom: 3px solid #9d96ad;
+	-moz-border-image: -moz-linear-gradient(left,  #9d96ad 0%, #93a0b3 14%, #a1ddc3 32%, #c0dfb5 48%, #d8ae95 64%, #cd6186 81%, #b25f89 100%); /* FF3.6-15 */
+	-webkit-border-image: -webkit-linear-gradient(left,  #9d96ad 0%,#93a0b3 14%,#a1ddc3 32%,#c0dfb5 48%,#d8ae95 64%,#cd6186 81%,#b25f89 100%); /* Chrome10-25,Safari5.1-6 */
+	border-image: linear-gradient(to right,  #9d96ad 0%,#93a0b3 14%,#a1ddc3 32%,#c0dfb5 48%,#d8ae95 64%,#cd6186 81%,#b25f89 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	border-image-slice: 1;
 	@media (min-width: $screen-md-min){
 		padding: 85px 0;
 		font-size: 36px;
@@ -1822,7 +1837,55 @@ img{
 			width: 272px;
 		}
 	}
+}
+.expertise{
+	min-height: 529px;
+	background: url(../images/expertise-bg.jpg) center;
+	background-size: cover;
+	position: relative;
+	&:after{
+		height: 34px;
+		width: 100%;
+		position: absolute;
+		content: ' ';
+		bottom: -34px;
+		background: url(../images/drop-shadow.png) bottom no-repeat;
+	}
+	.expert-image{
+		position: absolute;
+		bottom:0;
+		left: 0;
+		@media(max-width: $screen-md-min){
+			display: none;
+		}
+	}
+	.content{
+		padding: 30px 0;
+		font-size: 14px;
+		@media(min-width: $screen-md-min){
+			font-size: 18px;
+			padding: 85px 0;
+		}
+	}
+	.hd{
+		font-weight: 300;
+		text-align: center;
+		font-size: 24px;
+		@media (min-width: $screen-md-min){
+			font-size: 60px;
+			text-align: left;
+		}
+	}
+	ul{
+		list-style-image: url(../images/check.png);
+		padding-left: 20px;
+		line-height: 1.7;
+	}
+}
 
+.journey {
+	background: url(../images/buildings-white.jpg) center;
+	background-size: cover;
 }
 /** END BIO PAGE **/
 
