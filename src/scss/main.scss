@@ -1886,6 +1886,23 @@ ul.two-columns{
 .journey {
 	background: url(../images/buildings-white.jpg) center;
 	background-size: cover;
+	.container {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		@media (min-width: $screen-md-min){
+			padding-top: 122px;
+			padding-bottom: 122px;
+		}
+	}
+	.hd{
+		font-size: 24px;
+		font-weight: 300;
+		margin-bottom: 30px;
+		@media (min-width: $screen-md-min){
+			font-size: 60px;
+			margin-bottom: 60px;
+		}
+	}
 }
 /** END BIO PAGE **/
 
