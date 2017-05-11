@@ -170,7 +170,7 @@ ul.two-columns{
 }
 /**HEADER**/
 .head-wrap {
-  min-height: 777px;
+  // min-height: 777px;
   background: url(../images/head-bg-home.jpg) center;
   background-size: cover;
   &.head-wrap-bio{
@@ -392,6 +392,7 @@ ul.two-columns{
 		@media (min-width: $screen-md-min){
 			text-align: left;
 			margin-left: -188px;	
+			width: 528px;
 		}
 		@media (min-width: $screen-lg-min){
 			margin-left: -88px;
@@ -483,6 +484,10 @@ ul.two-columns{
 				display: block;
 				padding-right: 0;
 				text-align: center;
+			}
+			> a {
+				display: block;
+				width: 364px;
 			}
 		}
 		.media-object {
@@ -1315,6 +1320,7 @@ ul.two-columns{
 /** BIO PAGE **/
 .head-wrap-bio{
 	position: relative;
+	min-height:777px;
 	@media(max-width: $screen-md-min){
 		min-height: 560px;
 	}
