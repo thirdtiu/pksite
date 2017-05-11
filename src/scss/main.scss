@@ -592,9 +592,24 @@ img{
 	color: #fff;
 	padding-top: 150px;
 	padding-bottom: 50px;
+	position: relative;
 	.f-container {
 		justify-content: space-between;
 		align-items: center;
+	}
+	&.down-arrow:after{
+		top: 100%;
+		left: 50%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-color: rgba(51, 51, 51, 0);
+		border-top-color: #333333;
+		border-width: 28px;
+		margin-left: -28px;
 	}
 	h1{
 		font-weight: 300;
@@ -1666,6 +1681,93 @@ img{
 		display: inline-block;
 		@media(max-width: $screen-md-min){
 			max-width: 280px;
+		}
+	}
+}
+.resurrection-block{
+	background-color: rgba(29, 29, 29, .7);
+	min-height: 424px;
+	position: relative;
+	color: #fff;
+	padding: 40px 0 100px;
+	@media (min-width: $screen-md-min){
+		padding: 90px 0 200px;
+	}
+	h1{
+		text-transform: uppercase;
+	}
+	p{
+		line-height: 1.5 !important;
+	}
+}
+.elixir-section{
+	min-height: 620px;
+	position: relative;
+	&:before{
+		content: ' ';
+		position: absolute;
+		background: url(../images/clouds-bot.png) top repeat-x;
+		height: 166px;
+		width: 100%;
+		top: -166px;
+	}
+	&:after{
+		content: ' ';
+		position: absolute;
+		background: url(../images/clouds-top.png) bottom repeat-x;
+		height: 166px;
+		width: 100%;
+		bottom: -166px;
+	}
+	.hd{
+		color: #2c0130;
+		font-weight: 800;
+		text-align: center;
+		margin-bottom: 50px;
+		font-size: 24px;
+		margin-top: 0;
+		span{
+			color: #d40951;
+		}
+		@media (min-width: $screen-md-min){
+			font-size: 60px;
+		}
+	}
+	.f-container {
+		flex-direction: column-reverse;
+		@media (min-width: $screen-md-min){
+			flex-direction: row;
+		}
+		img{
+			margin-bottom: 30px;
+			@media (min-width: $screen-md-min){
+				width: 50%;
+				margin-left: 50px;
+				margin-bottom: 0;
+			}
+		}
+		.content{
+			width: 100%;
+			@media (min-width: $screen-md-min){
+				width: 50%;	
+			}	
+			p{
+				margin-bottom: 20px;
+				font-size: 12px;
+				@media(min-width: $screen-md-min){
+					font-size: 18px;
+					margin-bottom: 40px;
+				}
+			}	
+		}
+	}
+}
+.downloadables{
+	padding: 60px 0;
+	background: #f4f4f4;
+	.btn{
+		@media (max-width: $screen-md-min){
+			margin-bottom: 15px;
 		}
 	}
 }
