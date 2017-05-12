@@ -2050,6 +2050,7 @@ ul.two-columns{
 .journey {
 	background: url(../images/buildings-white.jpg) center;
 	background-size: cover;
+	padding-bottom: 50px;
 	.container {
 		padding-top: 30px;
 		padding-bottom: 30px;
@@ -2065,6 +2066,30 @@ ul.two-columns{
 		@media (min-width: $screen-md-min){
 			font-size: 60px;
 			margin-bottom: 60px;
+		}
+	}
+	.slides{
+		display: none;
+		@media(min-width: $screen-md-min){
+			display: block;
+		}
+		iframe{
+			margin: 0 auto 50px;
+		}
+		.btn{
+			text-transform: uppercase;
+			font-size: 36px;
+			font-weight: bold;
+			color: #3d0044;
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e6dbad+0,e5848b+50,c15f86+100 */
+			background: #e6dbad; /* Old browsers */
+			background: -moz-linear-gradient(left,  #e6dbad 0%, #e5848b 50%, #c15f86 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(left,  #e6dbad 0%,#e5848b 50%,#c15f86 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to right,  #e6dbad 0%,#e5848b 50%,#c15f86 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6dbad', endColorstr='#c15f86',GradientType=1 ); /* IE6-9 */
+			border: none;
+			border-radius: 5px;
+			padding: 15px 80px;
 		}
 	}
 }
