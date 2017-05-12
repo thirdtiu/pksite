@@ -3,24 +3,42 @@ jquery.min.js
 bootstrap.js
 jquery.mmenu.all.min.js
 */
+var glocation, gpostalcode, gcoordinates, gipaddress;
 (function ($) {
-    $.fn.serializeFormJSON = function () {
+  $.fn.serializeFormJSON = function () {
 
-        var o = {};
-        var a = this.serializeArray();
-        $.each(a, function () {
-            if (o[this.name]) {
-                if (!o[this.name].push) {
-                    o[this.name] = [o[this.name]];
-                }
-                o[this.name].push(this.value || '');
-            } else {
-                o[this.name] = this.value || '';
-            }
-        });
-        return o;
-    };
+      var o = {};
+      var a = this.serializeArray();
+      $.each(a, function () {
+          if (o[this.name]) {
+              if (!o[this.name].push) {
+                  o[this.name] = [o[this.name]];
+              }
+              o[this.name].push(this.value || '');
+          } else {
+              o[this.name] = this.value || '';
+          }
+      });
+      return o;
+  };
 })(jQuery);
+
+var gatherLocationInfo = (function() {
+    var onSuccess = function (geoipResponse) {
+      glocation = geoipResponse['city']['names']['en'];
+      gpostalcode = geoipResponse['postal']['code'];
+      gcoordinates = geoipResponse['location']['latitude'] + ',' + geoipResponse['location']['longitude'];
+      gipaddress = geoipResponse['traits']['ip_address'];
+    }
+
+    var onError = function (error) {
+        return;
+    };
+
+    return function () {
+      geoip2.city(onSuccess, onError);
+    };
+}());
 $(document).ready(function() {
 
   function GetURLParam(sParam) {
@@ -33,6 +51,8 @@ $(document).ready(function() {
       }
     }
   }
+
+  gatherLocationInfo();
 
   // mobile nav
   $("#mobile-menu").mmenu({
@@ -49,23 +69,53 @@ $(document).ready(function() {
   });
 
   //event form populate hidden fields
-  $('.event-form input[name="utm_source"]').val(GetURLParam("utm_source"));
-  $('.event-form input[name="utm_medium"]').val(GetURLParam("utm_medium"));
-  $('.event-form input[name="utm_campaign"]').val(GetURLParam("utm_campaign"));
-  $('.event-form input[name="utm_term"]').val(GetURLParam("utm_term"));
-  $('.event-form input[name="utm_content"]').val(GetURLParam("utm_content"));
-  $('.event-form input[name="countrycode"]').val(GetURLParam("countrycode"));
-  $('.event-form input[name="location"]').val(GetURLParam("location"));
-  $('.event-form input[name="postalcode"]').val(GetURLParam("postalcode"));
-  $('.event-form input[name="coordinates"]').val(GetURLParam("coordinates"));
-  $('.event-form input[name="ipaddress"]').val(GetURLParam("ipaddress"));
-  $('.event-form input[name="metrocode"]').val(GetURLParam("metrocode"));
+  $('input[name="utm_source"]').value = GetURLParam("utm_source");
+  $('input[name="utm_medium"]').value = GetURLParam("utm_medium");
+  $('input[name="utm_campaign"]').value = GetURLParam("utm_campaign");
+  $('input[name="utm_term"]').value = GetURLParam("utm_term");
+  $('input[name="utm_content"]').value = GetURLParam("utm_content");
+  $('input[name="location"]').value = glocation;
+  $('input[name="postalcode"]').value = gpostalcode;
+  $('input[name="coordinates"]').value = gcoordinates;
+  $('input[name=ipaddress]').value = gipaddress;
+  // $('input[name="countrycode"]').val(GetURLParam("countrycode"));
+  // $('input[name="metrocode"]').val(GetURLParam("metrocode"));
 
-  setTimeout(function(){
-    var form = $('form.event-form');
-    var data = form.serializeFormJSON();
-    console.log(data);
-  }, 5000);
+  // setTimeout(function(){
+  //   var form = $('form');
+  //   var data = form.serializeFormJSON();
+  //   console.log(data);
+  // }, 5000);
+
+   $('body').on('submit', '.home-banner-form, .footer-form, .event-banner-form, .event-bottom-form', function(e){
+      // e.preventDefault();
+      // var form = $(this);
+      // var data = form.serializeFormJSON();
+      // data.location = glocation;
+      // data.postalcode = gpostalcode;
+      // data.coordinates = gcoordinates;
+      // data.ipaddress = gipaddress;
+      // console.log(data);
+
+      // alert($('input[name=ipaddress]').val());
+      // $.ajax({
+      //   type: 'POST',
+      //   url: 'https://app.wavecell.com/api/v1/signups',
+      //   dataType: 'html',
+      //   data: {
+      //     email : data.sign_email,
+      //     gclid: gclid
+      //   },
+      //   error: function(jqXHR, textStatus,  errorThrown) {
+      //     var response = JSON.parse(jqXHR.responseText);
+      //     console.log(response.message);
+      //   },
+      //   success: function(data, textStatus, jqXHR) {
+      //     var response = JSON.parse(jqXHR.responseText);
+      //     console.log(response.message);
+      //   }
+      // });
+   })
 
 
   //countdown timer in events page
