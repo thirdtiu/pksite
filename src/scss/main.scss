@@ -495,6 +495,9 @@ ul.two-columns{
 			> a {
 				display: block;
 				width: 364px;
+				@media (max-width: $screen-md-min){
+					margin: 0 auto;
+				}
 			}
 		}
 		.media-object {
@@ -648,17 +651,26 @@ ul.two-columns{
 	}
 	.hd {
 		margin-bottom: 20px;
-		.btn{
-			border-radius: 16px;
-			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d56784+0,da928b+50,dac99f+100 */
-			background: #d56784; /* Old browsers */
-			background: -moz-linear-gradient(left,  #d56784 0%, #da928b 50%, #dac99f 100%); /* FF3.6-15 */
-			background: -webkit-linear-gradient(left,  #d56784 0%,#da928b 50%,#dac99f 100%); /* Chrome10-25,Safari5.1-6 */
-			background: linear-gradient(to right,  #d56784 0%,#da928b 50%,#dac99f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d56784', endColorstr='#dac99f',GradientType=1 ); /* IE6-9 */
-			color: #000;
-			border: none;
+		@media (max-width: $screen-md-min){
+			width: 100%;
 		}
+		.btn{
+			display: none;
+			@media (min-width: $screen-md-min){
+				display: inline-block;
+			}
+		}
+	}
+	.btn{
+		border-radius: 16px;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d56784+0,da928b+50,dac99f+100 */
+		background: #d56784; /* Old browsers */
+		background: -moz-linear-gradient(left,  #d56784 0%, #da928b 50%, #dac99f 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left,  #d56784 0%,#da928b 50%,#dac99f 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right,  #d56784 0%,#da928b 50%,#dac99f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d56784', endColorstr='#dac99f',GradientType=1 ); /* IE6-9 */
+		color: #000;
+		border: none;
 	}
 	.social-icons-lg {
 		display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -702,7 +714,7 @@ ul.two-columns{
 		list-style-type: none;
 		
 		li {
-			border: 1px solid #ccc;
+			border: 2px solid #ccc;
 			margin-bottom: 7px;
 			display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
 		  display: -ms-flexbox;  /* TWEENER - IE 10 */
@@ -718,18 +730,20 @@ ul.two-columns{
 		  	font-size: 29px;
 		  	text-align: center;
 		  	line-height: 1;
+		  	padding: 0 10px;
 		  	@media (min-width: $screen-md-min){
 		  		font-size: 58px;
 		  	}
 		  	strong {
 		  		font-size: 48px;
+		  		display: block;
 		  		@media (min-width: $screen-md-min){
 		  			font-size: 90px;
 		  		}
 		  	}
 		  }
 		  & > .content {
-				border-left: 1px solid #ccc;
+				border-left: 2px solid #ccc;
 				align-self: stretch;
 				padding: 10px 15px;
 				font-size: 12px;
@@ -764,6 +778,7 @@ ul.two-columns{
 	padding: 35px;
 	@media (max-width: $screen-md-min){
 		font-size: 12px;
+		padding: 15px;
 	}
 	.form-control {
 		@media (min-width: $screen-md-min){
