@@ -1347,7 +1347,12 @@ ul.two-columns{
 
 /** EVENTS THANK YOU PAGE **/
 .event-navbar-details{
-	margin-top: 24px;
+	margin-top: 12px;
+	font-size: 14px;
+	@media (min-width: $screen-md-min){
+		margin-top: 24px;
+		font-size: 18px;
+	}
 }
 .event-thankyou-banner{
 	.hd{
@@ -1446,6 +1451,11 @@ ul.two-columns{
 			padding-top:210px;
 			padding-bottom: 50px;
 			text-align: left;
+		}
+		p.share{
+			@media(max-width: $screen-md-min){
+				text-align: right;
+			}
 		}
 		h2{
 			font-size: 30px;
