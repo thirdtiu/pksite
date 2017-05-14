@@ -40,7 +40,13 @@ var gatherLocationInfo = (function() {
     };
 }());
 $(document).ready(function() {
-
+  $('form').each(function() {  // attach to all form elements on page
+      $(this).validate({       // initialize plugin on each form
+        rules: {
+          "fields[email]": "email"
+        }
+      });
+  });
   function GetURLParam(sParam) {
     var sPageURL = window.location.search.substring(1);
     var sURLVariables = sPageURL.split('&');

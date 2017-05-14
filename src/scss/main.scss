@@ -936,7 +936,7 @@ ul.two-columns{
 	.hd {
 		font-weight: bold;
 		font-style: italic;
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 		font-size: 18px;
 		display: block;
 		@media (min-width: $screen-md-min){
@@ -2281,6 +2281,9 @@ ul.two-columns{
 				@media (max-width: $screen-md-min){
 					width: 100%;
 				}
+			}
+			.form-inline label.error{
+				font-size: 14px;
 			}
 			.btn {
 				@media (max-width: $screen-md-min){

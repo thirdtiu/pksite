@@ -110,7 +110,10 @@ output {
 // input[type="search"]
 // input[type="tel"]
 // input[type="color"]
-
+label.error{
+  color: #ffa6ac;
+  font-size: 14px;
+}
 .form-control {
   border-radius: 0;
   font-weight: 300;
@@ -154,6 +157,9 @@ output {
   &[disabled],
   fieldset[disabled] & {
     cursor: $cursor-disabled;
+  }
+  &.error{
+    border-color: #ffa6ac;
   }
 
   // [converter] extracted textarea& to textarea.form-control
@@ -480,6 +486,12 @@ input[type="checkbox"] {
       display: inline-block;
       margin-bottom: 0;
       vertical-align: middle;
+      position: relative;
+      label.error{
+        position: absolute;
+        top:-26px;
+        left:0;
+      }
     }
 
     // In navbar-form, allow folks to *not* use `.form-group`
