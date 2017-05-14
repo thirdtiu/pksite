@@ -225,6 +225,9 @@ ul.two-columns{
 	&.affix .navbar{
 		background: rgba(255, 255, 255, .8);
 	}
+	&.affix.dark .navbar{
+		background: rgba(0, 0, 0, .6);
+	}
 }
 
 .navbar-toggle {
@@ -1393,6 +1396,9 @@ ul.two-columns{
 		margin-top: 24px;
 		font-size: 18px;
 	}
+}
+.dark .event-navbar-details{
+	color: #fff;
 }
 .event-thankyou-banner{
 	.hd{
