@@ -55,8 +55,8 @@ gulp.task('js', function() {
 
   var jsbuild = gulp.src(folder.src + 'js/**/*')
     .pipe(deporder())
-    .pipe(concat('main.js'))
-    .pipe(uglify());
+    .pipe(concat('main.js'));
+    // .pipe(uglify());
 
   if (!devBuild) {
     jsbuild = jsbuild
