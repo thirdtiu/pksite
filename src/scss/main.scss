@@ -573,9 +573,7 @@ ul.two-columns{
 /** END OF BANNER **/
 
 /** ABOUT SECTION **/
-.about-section {
-	padding-top: 86px;
-	min-height: 797px;
+.about-section {	
 	background: url(../images/bg-about.jpg) center;
 	background-size: cover;
 	position: relative;
@@ -589,13 +587,23 @@ ul.two-columns{
 		bottom: 0;
 		width: 100%;
 	}
+	.container{
+		min-height: 797px;
+		padding-top: 86px;
+		position: relative;
+	}
 	.about-img {
 		position: absolute;
 		bottom: 0;
-		right: 0;
+		right: -50px;
+		width: 500px;
 		display: none;
 		@media (min-width: $screen-lg-min){
 			display: block;
+		}
+		@media (min-width: 1406px){
+			right: -140px;
+			width: 612px;
 		}
 	}
 	.content {
