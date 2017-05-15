@@ -777,8 +777,15 @@ ul.two-columns{
 		margin: 0 0 40px 0;
 		padding: 0;
 	}
+	.f-container{
+		align-items: stretch;
+	}
 }
 .talks-box {
+	padding-top: 35px;
+	@media (min-width: $screen-md-min){
+		margin-right: 15px;
+	}
 	.talks-list {
 		margin: 0 0 20px 0;
 		padding: 0;
@@ -798,6 +805,7 @@ ul.two-columns{
 		  	font-weight: 900;
 		  	text-transform: uppercase;
 		  	color: #3d0044;
+		  	letter-spacing: -3px;
 		  	font-size: 29px;
 		  	text-align: center;
 		  	line-height: 1;
@@ -825,12 +833,13 @@ ul.two-columns{
 				& > h2 {
 					font-size: 16px;
 					font-weight: bold;
+					margin: 0 0 10px 0;
 					@media (min-width: $screen-md-min){
 						font-size: 30px;
 					}
 				}
 				& > p {
-					margin-bottom: 20px;
+					margin-bottom: 10px;
 				}
 		  }
 		}
@@ -841,6 +850,7 @@ ul.two-columns{
 		font-size: 10px;
 		@media (min-width: $screen-md-min){
 			font-size: 18px;
+			margin-bottom: 0;
 		}
 	}
 }
@@ -851,11 +861,17 @@ ul.two-columns{
 		font-size: 12px;
 		padding: 15px;
 	}
+	@media (min-width: $screen-md-min){
+		margin-left: 15px;
+	}
 	.form-control {
 		@media (min-width: $screen-md-min){
 			padding-left: 30px;
 			padding-right: 30px;
 		}
+	}
+	textarea{
+		height: 230px;
 	}
 	.form-group{
 		position: relative;
