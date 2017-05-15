@@ -57,21 +57,39 @@ ul.two-columns{
 
 	.twitter a {
 		background-position: 0 0;
+		&:hover {
+			background-position: 0 -30px;
+		}
 	}
 	.facebook a {
 		background-position: -34px 0;
+		&:hover {
+			background-position: -34px -30px;
+		}
 	}
 	.youtube a {
 		background-position: -74px 0;
+		&:hover {
+			background-position: -74px -30px;
+		}
 	}
 	.linkedin a {
 		background-position: -118px 0;
+		&:hover {
+			background-position: -118px -30px;
+		}
 	}
 	.instagram a {
 		background-position: -162px 0;
+		&:hover {
+			background-position: -162px -30px;
+		}
 	}
 	.snapchat a {
 		background-position: -204px 0;
+		&:hover {
+			background-position: -204px -30px;
+		}
 	}
 }
 .social-icons-lg {
