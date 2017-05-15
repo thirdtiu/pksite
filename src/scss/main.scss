@@ -216,6 +216,7 @@ ul.two-columns{
   &.head-wrap-bio{
   	background: url(../images/bio-bg.jpg) center;
   	background-size: cover;
+  	min-height: 647px;
   }
 }
 
@@ -537,7 +538,7 @@ ul.two-columns{
 			}
 			> a {
 				display: block;
-				width: 364px;
+				width: 324px;
 				@media (max-width: $screen-md-min){
 					margin: 0 auto;
 				}
@@ -766,7 +767,7 @@ ul.two-columns{
 		  align-items: center;
 
 		  & > .date {
-		  	font-family: 'Roboto Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		  	font-family: 'HelveticaNeueLTStd HvCn', 'Roboto Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 		  	font-weight: 900;
 		  	text-transform: uppercase;
 		  	color: #3d0044;
@@ -775,7 +776,7 @@ ul.two-columns{
 		  	line-height: 1;
 		  	padding: 0 10px;
 		  	@media (min-width: $screen-md-min){
-		  		font-size: 58px;
+		  		font-size: 54px;
 		  	}
 		  	strong {
 		  		font-size: 48px;
@@ -910,7 +911,7 @@ ul.two-columns{
 		color: #3d0044;
 		font-size: 30px;
 		@media (min-width: $screen-md-min) {
-			font-size: 48px;
+			font-size: 46px;
 		}
 	}
 	.meetup-box{
@@ -1124,6 +1125,7 @@ ul.two-columns{
 	  }
 
 	  img{
+	  	width: 378px;
 	  	@media (max-width: $screen-md-min){
 	  		width: 218px;
 	  	}
@@ -2026,6 +2028,10 @@ ul.two-columns{
 		@media (max-width: $screen-md-min){
 			margin-bottom: 15px;
 			font-size: 16px;
+		}
+		@media( min-width: $screen-md-min ){
+			padding-left: 45px;
+			padding-right: 45px;
 		}
 	}
 }
