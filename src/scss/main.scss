@@ -345,7 +345,7 @@ ul.two-columns{
 /** mmenu **/
 /* prevent mmenu FOUC */
 #mobile-menu {
-	position: absolute;
+	// position: absolute;
 	visibility: hidden;
 	&.mm-menu {
 		visibility: visible;
@@ -355,7 +355,7 @@ ul.two-columns{
 	height: 100%;
 }
 .mm-menu.mm-offcanvas.mm-bottom {
-	top: 0;
+	// top: 40px;
 	bottom: auto;
 	margin-top: 40px;
 }
@@ -373,7 +373,7 @@ ul.two-columns{
 	display: none;
 }
 .mm-panel.mm-hassearch.mm-hasnavbar{
-	padding-top: 60px;
+	// padding-top: 60px;
 }
 .mm-panel.mm-hassearch.mm-hasnavbar > .mm-search {
 	top: 0;
