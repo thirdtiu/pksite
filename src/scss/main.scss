@@ -175,15 +175,15 @@ ul.two-columns{
 		background: -webkit-linear-gradient(45deg,  #8ec9c4 1%,#b4ddb5 100%); /* Chrome10-25,Safari5.1-6 */
 		background: linear-gradient(45deg,  #8ec9c4 1%,#b4ddb5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8ec9c4', endColorstr='#b4ddb5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-		border-color: transparent;
 		text-transform: uppercase;
 		font-weight: bold;
-		border-color: transparent;
+		border: none;
 		color: #000;
+		padding-top: 7px;
+		padding-bottom: 7px;
 		&:hover,
 		&:active {
 			color: #fff;
-			border-color: transparent;
 			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#baa195+0,b06a8e+50,ad5f8f+100 */
 			background: #baa195; /* Old browsers */
 			background: -moz-linear-gradient(left,  #baa195 0%, #b06a8e 50%, #ad5f8f 100%); /* FF3.6-15 */
@@ -2348,6 +2348,9 @@ ul.two-columns{
 					width: 100%;
 				}
 			}
+		}
+		.btn-primary{
+			border-color: transparent;
 		}
 	}
 	.bottom-bar{
