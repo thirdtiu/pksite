@@ -281,6 +281,11 @@ ul.two-columns{
 		margin-bottom: 4px;
 	}
 }
+.mm-menu.mm-offcanvas.mm-opened{
+	@media (min-width: $screen-md-min) {
+		display: none !important;
+	}
+}
 /* bootstrap 3 level menu */
 
 .dropdown-submenu {
