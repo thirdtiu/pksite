@@ -179,8 +179,6 @@ ul.two-columns{
 		font-weight: bold;
 		border: none;
 		color: #000;
-		padding-top: 7px;
-		padding-bottom: 7px;
 		&:hover,
 		&:active {
 			color: #fff;
@@ -238,12 +236,18 @@ ul.two-columns{
 }
 
 .affix-wrap{
+	min-height:76px;
+	position: relative;
+}
+.affix{
 	width: 100%;
 	z-index: 999999;
-	&.affix .navbar{
+	top: 0;
+	position: fixed;
+	&.white .navbar{
 		background: rgba(255, 255, 255, .8);
 	}
-	&.affix.dark .navbar{
+	&.dark .navbar{
 		background: rgba(0, 0, 0, .6);
 	}
 }
