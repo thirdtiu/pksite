@@ -2246,8 +2246,11 @@ ul.two-columns{
 .header-content{
 	.container{
 		position: relative;
-		height: 295px;
+		height: 255px;
 		overflow: hidden;
+		@media(min-width: $screen-md-min){
+			height: 295px;
+		}
 	}
 	.image{
 		position: absolute;
@@ -2263,6 +2266,12 @@ ul.two-columns{
 		font-weight: 800;
 		text-transform: uppercase;
 		margin: 50px 0 0 0;
+		font-size: 30px;
+		text-align: center;
+		@media(min-width: $screen-md-min){
+			font-size: 60px;
+			text-align: left;
+		}
 	}
 }
 .policy-content{
@@ -2271,7 +2280,7 @@ ul.two-columns{
 		content: ' ';
 		position: absolute;
 		height: 166px;
-		background: url(../images/clouds-bot.png) bottom center repeat-x;
+		background: url(../images/clouds-bot.png) bottom left repeat-x;
 		top: -166px;
 		width: 100%;
 	}
@@ -2279,7 +2288,7 @@ ul.two-columns{
 		content: ' ';
 		position: absolute;
 		height: 166px;
-		background: url(../images/clouds-top.png) bottom center repeat-x;
+		background: url(../images/clouds-top.png) bottom left repeat-x;
 		bottom: -166px;
 		width: 100%;
 	}
@@ -2298,7 +2307,7 @@ ul.two-columns{
 		}
 		h2{
 			font-weight: 300;
-			font-size: 24px;
+			font-size: 19px;
 			margin: 0 0 30px 0;
 			strong{
 				font-weight: bold;
@@ -2314,6 +2323,10 @@ ul.two-columns{
 	ul.styled{
 		margin-bottom: 30px;
 		list-style-image: url(../images/bullet.png);
+		padding-left: 20px;
+		@media (min-width: $screen-md-min){
+			padding-left: 40px;
+		}
 		li {
 			margin-bottom: 10px;
 		}
@@ -2323,7 +2336,7 @@ ul.two-columns{
 	background: url(../images/head-bg-home.jpg) center;
 	background-size: cover;
 	.container{
-		height: 590px;
+		min-height: 590px;
 		padding-top:146px;
 		font-size: 14px;
 		position: relative;
@@ -2331,6 +2344,9 @@ ul.two-columns{
 			font-size: 18px;
 			line-height: 1.7;
 		}
+	}
+	.contact-details{
+		line-height: 1.8;
 	}
 	.hd{
 		font-size: 24px;
@@ -2340,15 +2356,19 @@ ul.two-columns{
 		}
 	}
 	.signature{
-		width: 334px;
+		display: none;
+		@media (min-width: $screen-md-min){
+			display: block;	
+			width: 334px;
+		}
 	}
 	.image{
-		display: none;
-		position: absolute;
-		right: 0;
-		bottom:0;
+		text-align: center;
 		@media (min-width: $screen-md-min){
 			display: block;
+			position: absolute;
+			right: 0;
+			bottom:0;
 		}
 	}
 }
