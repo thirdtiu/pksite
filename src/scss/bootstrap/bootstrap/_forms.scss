@@ -361,7 +361,8 @@ input[type="checkbox"] {
   }
 }
 
-@include input-size('.input-lg', $input-height-large, $padding-large-vertical, $padding-large-horizontal, 18px, $line-height-large, 0);
+// @include input-size('.input-lg', $input-height-large, $padding-large-vertical, $padding-large-horizontal, 18px, $line-height-large, 0);
+@include input-size('.input-lg', 54px, $padding-large-vertical, $padding-large-horizontal, 18px, $line-height-large, 0);
 .form-group-lg {
   .form-control {
     height: $input-height-large;

@@ -442,7 +442,6 @@ ul.two-columns{
 .home-banner {
 	position: relative;
 	z-index: 10;
-
 	&:after {
 		position: absolute;
 		height: 32px;
@@ -451,7 +450,9 @@ ul.two-columns{
 		content: ' ';
 		bottom: -32px;
 	}
-
+	&.no-tip:after{
+		display: none;
+	}
 	h1 {
 		font-size: 27px;
 		font-weight: 800;
@@ -478,6 +479,12 @@ ul.two-columns{
 			width: 223px;
 			@media (min-width: $screen-md-min){
 				width: 528px;
+			}
+		}
+		&.inside-banner-image{
+			@media (min-width: $screen-md-min){
+				width: 400px;
+				margin-left: -50px;
 			}
 		}
 	}
@@ -2377,6 +2384,160 @@ ul.two-columns{
 			position: absolute;
 			right: 0;
 			bottom:0;
+		}
+	}
+}
+/** END POLICY, TERMS, DISCLAIMER PAGE **/
+
+/** RECENT TALKS**/
+.home-banner{
+	.inside-content{
+		height: 400px;
+		display: flex;
+		align-items: center;
+	}
+}
+.banner-black-strip {
+	padding: 8px 0;
+	background: rgba(0, 0, 0, .9);
+	width: 100%;
+	bottom: 0;
+	color: #fff;
+	@media (min-width: $screen-md-min) {
+		position: absolute;
+	}
+	.border {
+		border-top: 3px solid #9d96ad;
+		border-bottom: 3px solid #9d96ad;
+		-moz-border-image: -moz-linear-gradient(left,  #9d96ad 0%, #93a0b3 14%, #a1ddc3 32%, #c0dfb5 48%, #d8ae95 64%, #cd6186 81%, #b25f89 100%); /* FF3.6-15 */
+		-webkit-border-image: -webkit-linear-gradient(left,  #9d96ad 0%,#93a0b3 14%,#a1ddc3 32%,#c0dfb5 48%,#d8ae95 64%,#cd6186 81%,#b25f89 100%); /* Chrome10-25,Safari5.1-6 */
+		border-image: linear-gradient(to right,  #9d96ad 0%,#93a0b3 14%,#a1ddc3 32%,#c0dfb5 48%,#d8ae95 64%,#cd6186 81%,#b25f89 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		border-image-slice: 1;
+		padding: 15px 0;
+		min-height: 220px;
+	}
+	.hd{
+		font-size: 36px;
+		margin: 20px 0;
+	}
+	form {
+		margin-top: 40px;
+	}
+	.form-control {
+		width: 100%;
+		@media (min-width: $screen-md-min) {
+			width: 180px;
+		}
+		@media (min-width: $screen-lg-min){
+			width: 400px;
+		}
+	}
+	.form-group {
+		@media (max-width: $screen-md-min) {
+			display: block;
+			margin-bottom: 5px;
+		}
+	}
+	.btn {
+		@media (max-width: $screen-md-min) {
+			display: block;
+			width: 100%;
+		}
+		@media (min-width: $screen-lg-min){
+			padding-left: 60px;
+			padding-right: 60px;
+		}
+	}
+}
+.multi-bg-content{
+	position: relative;
+	.left-bg{
+		height: 100%;
+		width: 50%;
+		top:0;
+		left: 0;
+		background: url(../images/bg-about.jpg) center;
+		background-size: cover;
+		position: absolute;
+		z-index: 1;
+	}
+	.right-bg{
+		height: 100%;
+		width: 50%;
+		right:0;
+		top:0;
+		background:#fff;
+		position: absolute;
+		z-index: 1;
+	}
+	.container{
+		position: relative;
+		z-index: 2;
+	}
+	.f-container{
+		align-items: stretch;
+	}
+	.left-content{
+		padding-top: 20px;
+		width: 33.02752293577982%;
+		padding-right: 18px;
+	}
+	.right-content{
+		padding: 20px;
+		background: #fff;
+	}
+	.left-navigation{
+		background: url(../images/border.png) top repeat-x;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		font-size: 26px;
+		font-weight: 300;
+		li{
+			padding: 15px 10px 15px 25px;
+			background: url(../images/border.png) bottom repeat-x;
+		}
+		a{
+			color: #2c0130;
+		}
+	}
+	.talks-card{
+		background: #fafafa;
+		border: 1px solid #d8d8d8;
+		padding: 30px;
+		.card-image{
+			padding-bottom: 30px;
+			background: url(../images/border.png) bottom repeat-x;
+		}
+		.card-header{
+			padding-bottom: 10px;
+			background: url(../images/border.png) bottom repeat-x;
+		}
+		.card-header h3{
+			font-size: 24px;
+			font-weight: bold;
+		}
+		.card-mini-details{
+			display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+		  display: -ms-flexbox;  /* TWEENER - IE 10 */
+		  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+		  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+		  align-items: flex-start;
+		  flex-direction: column;
+			font-size: 16px;
+			padding: 5px 0;
+			@media (min-width: $screen-md-min){
+				flex-direction: row;
+			}
+			.action{
+				width: 300px;
+			}
+			.btn{
+				border-radius: 100px;
+				font-size: 16px;
+				font-weight: normal;
+				text-transform: none;
+			}
 		}
 	}
 }
