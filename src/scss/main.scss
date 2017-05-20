@@ -15,6 +15,16 @@ ul.two-columns{
 	  column-gap: 20px;
 	}
 }
+ul.three-columns{
+	@media(min-width: $screen-md-min){
+		-moz-column-count: 3;
+	  -moz-column-gap: 20px;
+	  -webkit-column-count: 3;
+	  -webkit-column-gap: 20px;
+	  column-count: 3;
+	  column-gap: 20px;
+	}
+}
 /** flex containers **/
 .f-container {
 	display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -2352,6 +2362,9 @@ ul.two-columns{
 	background: url(../images/expertise-bg.jpg) center;
 	background-size: cover;
 	position: relative;
+	&.expertise-press{
+		min-height: auto;
+	}
 	&:after{
 		height: 34px;
 		width: 100%;
@@ -2384,6 +2397,13 @@ ul.two-columns{
 			font-size: 60px;
 			text-align: left;
 		}
+	}
+	&.expertise-press .hd{
+		margin: 0 0 20px 0;
+		@media (min-width: $screen-md-min){
+			font-size: 48px;
+			text-align: center;
+		}	
 	}
 	ul{
 		list-style-image: url(../images/check.png);
