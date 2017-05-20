@@ -2373,6 +2373,9 @@ ul.three-columns{
 		bottom: -34px;
 		background: url(../images/drop-shadow.png) bottom no-repeat;
 	}
+	&.expertise-press:after{
+		display: none;
+	}
 	.expert-image{
 		position: absolute;
 		bottom:0;
@@ -2825,9 +2828,14 @@ ul.three-columns{
 		}
 	}
 	.btn{
-		padding-left: 80px;
-		padding-right: 80px;
+		padding-left: 30px;
+		padding-right: 30px;
 		font-weight: bold;
+		text-transform: uppercase;
+		@media(min-width: $screen-sm-min){
+			padding-left: 80px;
+			padding-right: 80px;	
+		}
 	}
 	.image{
 		position: absolute;
@@ -2865,6 +2873,48 @@ ul.three-columns{
 		@media(min-width: $screen-md-min){
 			width: 356px;
 			font-size: 24px;
+		}
+	}
+}
+.thumbnails-section{
+	.f-container{
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	padding: 60px 0;
+	.image{
+		flex-basis: 329px;
+		margin-bottom: 20px;
+		.thumb{
+			position: relative;
+			img{
+				border: 3px solid #000;
+			}
+			.download{
+				position: absolute;
+				width: 28px;
+				height: 28px;
+				top: 15px;
+				right: 15px;
+				text-indent: -99999px;
+				outline: none;
+				background: url(../images/ico-download.png) no-repeat;
+			}
+		}
+		.details{
+			text-align: center;
+			padding: 15px 0;
+			font-size: 16px;
+		}
+	}
+	.btn{
+		font-weight: bold;
+		padding-left: 30px;
+		padding-right: 30px;
+		text-transform: uppercase;
+		@media (min-width: $screen-md-min) {
+			padding-left: 70px;
+			padding-right: 70px;	
 		}
 	}
 }
