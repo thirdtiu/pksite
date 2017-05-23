@@ -669,6 +669,9 @@ ul.three-columns{
 			@media (min-width: $screen-md-min){
 				width: 528px;
 			}
+			@media (max-width: $screen-md-min){
+				margin-left: -32px;
+			}
 		}
 		&.inside-banner-image{
 			@media (min-width: $screen-md-min){
@@ -2612,14 +2615,21 @@ ul.three-columns{
 		min-height: 220px;
 	}
 	.hd{
-		font-size: 24px;
-		margin: 20px 0;
+		font-size: 14px;
+		margin: 10px 0;
 		@media (min-width: $screen-md-min) {
 			font-size: 36px;	
+			margin: 20px 0;
 		}
 	}
 	form {
 		margin-top: 40px;
+	}
+	.form-inline .form-control{
+		@media (max-width: $screen-md-min) {
+			display: block;
+			width: 100%;
+		}
 	}
 	.form-control {
 		width: 100%;
@@ -2639,7 +2649,10 @@ ul.three-columns{
 	.btn {
 		@media (max-width: $screen-md-min) {
 			display: block;
-			width: 100%;
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 16px;
 		}
 		@media (min-width: $screen-lg-min){
 			padding-left: 60px;
@@ -2786,45 +2799,81 @@ ul.three-columns{
 	}
 	.container{
 		position: relative;
-		padding-top: 60px;
-		padding-bottom: 60px;
+		padding-top: 38px;
+		padding-bottom: 38px;
+		@media(min-width: $screen-md-min){
+			padding-top: 60px;
+			padding-bottom: 60px;
+		}
 	}
 	.hd{
 		font-weight: 300;
 		margin: 0 0 20px;
+		font-size: 24px;
 		@media(min-width: $screen-md-min){
 			padding-left: 20px;
+			font-size: 48px;
 		}
 	}
 	table{
-		width: 100%;
+		font-size: 12px;
 		margin-bottom: 30px;
+		@media (min-width: $screen-md-min){
+			font-size: 18px;
+			width: 100%;	
+		}
 		th{
-			padding: 5px 25px;
-			background: #f4f4f4;
-			width: 133px;
+			padding: 3px 10px 3px 0;
+			@media (min-width: $screen-md-min){
+				padding: 5px 25px;
+				background: #f4f4f4;
+				width: 133px;
+			}
 		}
 		td{
-			background: #f8f8f8;
-			padding: 5px 20px;
+			@media (min-width: $screen-md-min){
+				background: #f8f8f8;
+				padding: 5px 20px;
+			}
 		}
 		tr:nth-child(odd) td{
-			background: #f1f1f1;
+			@media (min-width: $screen-md-min){
+				background: #f1f1f1;
+			}
 		}
 		tr:nth-child(odd) th{
-			background: #e7e7e7;
+			@media (min-width: $screen-md-min){
+				background: #e7e7e7;
+			}
 		}
 		tr.yellow{
-			th{
-				background: #f9f0e5;
+			> th{
+				@media (min-width: $screen-md-min){
+					background: #f9f0e5;
+				}
 			}
 			td{
-				background: #fcf6f1;
+				@media (min-width: $screen-md-min){
+					background: #f8ede1;
+				}
 			}
 		}
 		tr.yellow:nth-child(odd) th,
 		tr.yellow:nth-child(odd) td{
-			background: #fcf8f3;
+			@media (min-width: $screen-md-min){
+				background: #fcf8f3;
+			}
+		}
+		th.social-hd{
+			@media (min-width: $screen-md-min){
+				background: #f8ede1;
+			}
+		}
+		img{
+			width: 15px;
+			@media (min-width: $screen-md-min){
+				width: 22px;
+			}
 		}
 	}
 	.btn{
@@ -2850,6 +2899,18 @@ ul.three-columns{
 			display: block;
 		}
 	}
+	.desktop-button{
+		display: none;
+		@media(min-width: $screen-md-min){
+			display: block;
+		}
+	}
+	.mobile-button{
+		text-align: center;
+		@media(min-width: $screen-md-min){
+			display: none;
+		}
+	}
 }
 .pitch-box{
 	background: url(../images/buildings-white.jpg) center;
@@ -2863,9 +2924,14 @@ ul.three-columns{
 	.video{
 		margin-top: 60px;
 		margin-bottom: 20px;
+		text-align: center;
+		@media (max-width: $screen-md-min) {
+			margin-bottom: 40px;
+		}
 	}
 	.image{
 		margin-bottom: 100px;
+		text-align: center;
 	}
 	.btn{
 		margin-bottom: 11px;
