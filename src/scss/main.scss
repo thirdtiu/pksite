@@ -2693,16 +2693,27 @@ ul.three-columns{
 	.left-content{
 		padding-top: 20px;
 		margin-bottom: 20px;
+		background: url(../images/bg-about.jpg) center;
+		background-size: cover;
+		margin-left: -15px;
+		margin-right: -15px;
 		@media (min-width: $screen-md-min){
 			width: 33.02752293577982%;
 			padding-right: 18px;
 			margin-bottom: 0;
+			background: none;
+			margin-left: 0;
+			margin-right: 0;
 		}
 	}
 	.right-content{
 		background: #fff;
+		margin-left: -15px;
+		margin-right: -15px;
 		@media (min-width: $screen-md-min){
-			padding: 20px;	
+			padding: 20px;
+			margin-left: 0;
+			margin-right: 0;
 		}
 	}
 	.left-navigation{
@@ -2716,11 +2727,12 @@ ul.three-columns{
 			background: url(../images/border.png) top repeat-x;
 		}
 		li{
-			display: inline;
+			display: block;
+			padding: 15px 10px 15px 25px;
+			background: url(../images/border.png) bottom repeat-x;
+			text-align: center;
 			@media (min-width: $screen-md-min){
-				padding: 15px 10px 15px 25px;
-				display: block;
-				background: url(../images/border.png) bottom repeat-x;
+				text-align: left;
 			}
 		}
 		a{
@@ -2742,10 +2754,19 @@ ul.three-columns{
 		.card-header{
 			padding-bottom: 10px;
 			background: url(../images/border.png) bottom repeat-x;
+			font-size: 12px;
+			@media (min-width: $screen-md-min){
+				font-size: 18px;
+			}
 		}
 		.card-header h3{
-			font-size: 24px;
+			font-size: 14px;
 			font-weight: bold;
+			margin-top: 10px;
+			@media (min-width: $screen-md-min){
+				margin-top: 20px;
+				font-size: 24px;	
+			}
 		}
 		.card-mini-details{
 			display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -2757,8 +2778,10 @@ ul.three-columns{
 			font-size: 16px;
 			padding: 5px 0;
 			background: url(../images/border.png) bottom repeat-x;
+			font-size: 12px;
 			@media (min-width: $screen-md-min){
 				flex-direction: row;
+				font-size: 18px;
 			}
 			p{
 				@media (min-width: $screen-md-min){
@@ -2767,9 +2790,12 @@ ul.three-columns{
 			}
 			.action{
 				text-align: center;
+				width: 100%;
+				margin-bottom: 30px;
 				@media (min-width: $screen-md-min){
 					width: 300px;
 					text-align: left;
+					margin-bottom: 0;
 				}
 			}
 			.btn{
@@ -2778,8 +2804,16 @@ ul.three-columns{
 				font-weight: normal;
 				text-transform: none;
 				margin-bottom: 5px;
+				display: block;
+				width: 173px;
+				margin-left: auto;
+				margin-right: auto;
 				@media (min-width: $screen-md-min){
+					margin-left: 0;
+					margin-right: 0;
 					margin-bottom: 0;
+					width: auto;
+					display: inline-block;
 				}
 			}
 		}
