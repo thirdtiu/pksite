@@ -2781,7 +2781,7 @@ ul.three-columns{
 			font-size: 12px;
 			@media (min-width: $screen-md-min){
 				flex-direction: row;
-				font-size: 18px;
+				font-size: 16px;
 			}
 			p{
 				@media (min-width: $screen-md-min){
@@ -2793,8 +2793,8 @@ ul.three-columns{
 				width: 100%;
 				margin-bottom: 30px;
 				@media (min-width: $screen-md-min){
-					width: 300px;
-					text-align: left;
+					width: 335px;
+					text-align: right;
 					margin-bottom: 0;
 				}
 			}
@@ -2808,6 +2808,11 @@ ul.three-columns{
 				width: 173px;
 				margin-left: auto;
 				margin-right: auto;
+				&:hover,
+				&:active{
+					background: #000;
+					color: #fff;
+				}
 				@media (min-width: $screen-md-min){
 					margin-left: 0;
 					margin-right: 0;
