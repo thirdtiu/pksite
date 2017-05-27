@@ -233,6 +233,16 @@ ul.three-columns{
 /**HEADER**/
 .head-wrap {
   // min-height: 777px;
+  position: relative;
+  z-index: 20;
+  &.shadowed:after{
+  	content: '';
+  	position: absolute;
+  	height: 32px;
+  	bottom: -32px;
+  	width: 100%;
+  	background: url(../images/drop-shadow.png) bottom center no-repeat;
+  }
   background: url(../images/head-bg-home.jpg) center;
   background-size: cover;
   &.head-wrap-bio{
@@ -633,12 +643,14 @@ ul.three-columns{
 		display: none;
 	}
 	.inside-content{
-		
 		@media (min-width: $screen-md-min) {
 			height: 400px;
 			display: flex;
 			align-items: center;
-			justify-content: flex-end;	
+			justify-content: flex-end;
+		}
+		&.text-left{
+			justify-content: flex-start;
 		}
 	}
 	h1 {
@@ -648,6 +660,16 @@ ul.three-columns{
 		margin: 0;
 		text-align: center;
 		color: #3d0044;
+		span{
+			font-size: 24px;
+			color: #2c2c2c;
+			display: block;
+			text-transform: none;
+			font-weight: normal;
+			strong{
+				font-weight: bold;
+			}
+		}
 		@media (min-width: $screen-md-min){
 			font-size: 66px;
 			text-align: left;
@@ -2683,6 +2705,16 @@ ul.three-columns{
 		right:0;
 		background:#fff;
 	}
+	&.contact .right-bg{
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#edf4e3+0,dac7d7+100 */
+		// background: #edf4e3; /* Old browsers */
+		// background: -moz-radial-gradient(center, ellipse cover,  #edf4e3 0%, #dac7d7 100%); /* FF3.6-15 */
+		// background: -webkit-radial-gradient(center, ellipse cover,  #edf4e3 0%,#dac7d7 100%); /* Chrome10-25,Safari5.1-6 */
+		// background: radial-gradient(ellipse at center,  #edf4e3 0%,#dac7d7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edf4e3', endColorstr='#dac7d7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+		background: url(../images/gradient-radial.jpg) center;
+		background-size: cover;
+	}
 	.container{
 		position: relative;
 		z-index: 2;
@@ -2692,7 +2724,6 @@ ul.three-columns{
 	}
 	.left-content{
 		padding-top: 20px;
-		margin-bottom: 20px;
 		background: url(../images/bg-about.jpg) center;
 		background-size: cover;
 		margin-left: -15px;
@@ -2704,6 +2735,7 @@ ul.three-columns{
 			background: none;
 			margin-left: 0;
 			margin-right: 0;
+			margin-bottom: 20px;
 		}
 	}
 	.right-content{
@@ -2714,6 +2746,64 @@ ul.three-columns{
 			padding: 20px;
 			margin-left: 0;
 			margin-right: 0;
+		}
+	}
+	&.contact .right-content{
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#edf4e3+0,dac7d7+100 */
+		// background: #edf4e3; /* Old browsers */
+		// background: -moz-radial-gradient(center, ellipse cover,  #edf4e3 0%, #dac7d7 100%); /* FF3.6-15 */
+		// background: -webkit-radial-gradient(center, ellipse cover,  #edf4e3 0%,#dac7d7 100%); /* Chrome10-25,Safari5.1-6 */
+		// background: radial-gradient(ellipse at center,  #edf4e3 0%,#dac7d7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edf4e3', endColorstr='#dac7d7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+		background: url(../images/gradient-radial.jpg) center;
+		background-size: cover;
+		padding: 15px 15px 0 15px;
+		font-size: 14px;
+		@media (min-width: $screen-md-min) {
+			padding: 80px;
+			font-size: 18px;
+		}
+	}
+	&.contact .get-in-touch{
+		margin-left: -15px;
+		margin-right:-15px;
+		padding-left:15px;
+		padding-right:15px;
+		@media (min-width: $screen-md-min){
+			border-radius: 10px;
+			margin-left: 0;
+			padding-left:60px;
+			padding-right:60px;
+		}
+		.hd{
+			font-size: 24px;
+			font-weight: 300;
+			margin-bottom: 20px;
+			text-align: center;
+			padding: 0 30px;
+			@media (min-width: $screen-md-min){
+				text-align: left;
+				font-size: 36px;
+				padding: 0;
+			}
+		}
+		label{
+			font-weight: bold;
+		}
+		.form-control{
+			font-size: 18px;
+		}
+		::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		  font-style: normal;
+		}
+		::-moz-placeholder { /* Firefox 19+ */
+		  font-style: normal;
+		}
+		:-ms-input-placeholder { /* IE 10+ */
+		  font-style: normal;
+		}
+		:-moz-placeholder { /* Firefox 18- */
+		  font-style: normal;
 		}
 	}
 	.left-navigation{
