@@ -79,6 +79,7 @@
 	// $mail->addReplyTo('replyto@example.com', 'First Last');
 	//Set who the message is to be sent to
 	$mail->addAddress('thirdtiu@gmail.com', 'Avelino Tiu'); // where the mail is going to be sent
+
 	$mail->isHTML(true);                                  // Set email format to HTML
 	//Set the subject line
 	$mail->Subject = $subject;
@@ -90,6 +91,7 @@
 	//Attach an image file
 	// $mail->addAttachment('images/phpmailer_mini.png');
 	//send the message, check for errors
+	header('Location: event-thankyou.html');
 	if (!$mail->send()) {
 	    echo "Mailer Error: " . $mail->ErrorInfo;
 	} else {
