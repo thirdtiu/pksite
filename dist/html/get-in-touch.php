@@ -91,7 +91,7 @@
 	//Attach an image file
 	// $mail->addAttachment('images/phpmailer_mini.png');
 	//send the message, check for errors
-	header('Location: event-thankyou.html');
+	header('Location: thankyou.html');
 	if (!$mail->send()) {
 	    echo "Mailer Error: " . $mail->ErrorInfo;
 	} else {
