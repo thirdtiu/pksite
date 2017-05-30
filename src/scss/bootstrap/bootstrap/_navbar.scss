@@ -482,14 +482,8 @@
 
       &:hover,
       &:focus {
-        color: $navbar-default-link-hover-color;
-        // background-color: $navbar-default-link-hover-bg;
-        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e19c9d+0,ce7c95+100 */
-        background: #e19c9d; /* Old browsers */
-        background: -moz-linear-gradient(45deg,  #e19c9d 0%, #ce7c95 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(45deg,  #e19c9d 0%,#ce7c95 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(45deg,  #e19c9d 0%,#ce7c95 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e19c9d', endColorstr='#ce7c95',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        color: #000;
+        background: rgba(255, 255, 2555,.87);
       }
     }
     > .active > a {
@@ -529,8 +523,36 @@
   .navbar-form {
     border-color: $navbar-default-border;
   }
-
+  
   // Dropdown menu items
+  &.dark .navbar-nav {
+    li .dropdown-menu {
+      box-shadow: none;
+      border-color: transparent;
+      border-width: 0;
+      border-radius: 0;
+      background: rgba(255,255,255,.87);
+      font-size: 14px;
+      li a{
+        padding: 9px 4px;
+        margin-left: 8px;
+        margin-right: 8px;
+        border-bottom: 1px solid rgba(255, 255, 255, .4);
+
+        &:hover,
+        &:focus{
+          padding: 9px 12px;
+          margin-left: 0;
+          margin-right: 0;
+          color: #fff;
+          background-color: rgba(0, 0, 0, .4);
+        }
+      }
+      li:last-child > a{
+        border-bottom: none;
+      }
+    }
+  }
   .navbar-nav {
     // Remove background color from open dropdown
     > .open > a {
